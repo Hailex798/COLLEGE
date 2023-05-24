@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM API for HTML modification</title>
+</head>
+<body style="background-color:lightblue;text-align:center">
+    <h1 id="hdr1">Here's your ice cream</h1>
+    <img id="img1" src="" alt="Ice cream is not ready">
+    <p id="p1" onclick="eat()">Click here to eat</p>
+    <script>
+        function eat(){
+            document.getElementsByTagName("body")[0].style.background = "lightblue";
+            document.getElementById("img1").src = "ne.jpg";
+            document.getElementById("hdr1").innerHTML = "hope you liked it!";
+            document.getElementById("p1").innerHTML = "click here to fill"
+            document.getElementById("p1").setAttribute("onclick","fill()");
+        }
+        function Validate(){
+            if(document.myForm.uname.value == ""){
+                alert("Please provide your Uer Name");
+                document.myForm.uname.focus();
+                return false;
+            }
+            if(document.myForm.pass.value == ""){
+                alert("Please provide your Password");
+                document.myForm.pass.focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
